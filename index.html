@@ -3,13 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Blog</title>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
-    <title>Project Blog</title>
+    <script id="template" type="text/x-handlebars-template">
+        <article data-category="{{category}}">
+          <header>
+            <h1>{{title}}</h1>
+            <div class="byline">
+              <address><a href="{{authorUrl}}">Project Link</a></address><br>
+              {{modStatus}}
+            </div>
+          </header>
+          <section class="article-body">{{{body}}}</section>
+          <a href="#" class="read-on">Read on &rarr;</a>
+          <hr>
+        </article>
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -22,29 +36,18 @@
         <li><a href="https://www.linkedin.com/in/gregory-katchmar-3a48275a" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
         <li><a href="https://github.com/gnkatchmar" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
       </ul>
-      <div>
-        <ul id="filters">
-          <li>
-            <select id="category-filter">
-              <option value="">-- Filter by Categories --</option>
-            </select>
-          </li>
-        </ul>
-      </div>
     </nav>
     <main>
       <section id="projects" class="tab-content">
-        <article class="template" data-category="cat">
-          <header>
-            <h1>Title</h1>
-            <div class="byline">
-              <address><a href="***">Project Link</a></address><br>
-              Last substantial modification <time pubdate datetime="2000-01-01">Modification Time</time>
-            </div>
-          </header>
-          <section class="project-body"></section>
-          <a href="#" class="read-on">Read full entry &rarr;</a>
-        </article>
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="about" class="tab-content">
         <header>
@@ -64,6 +67,7 @@
     </main>
     <script src="https://use.fontawesome.com/4b6dc7e55d.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="scripts/blogProjects.js"></script>
     <script src="scripts/project.js"></script>
     <script src="scripts/projectView.js"></script>

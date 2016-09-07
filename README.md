@@ -1,21 +1,27 @@
 # Portfolio
 Project for Code Fellows 301
 
-Portfolio assignment for class 3
+Portfolio Assignment for Class 4 - Templates and Typography
+
+Use what you learned in the class 4 lecture to improve the structure of your Portfolio app codebase.
 
 User Stories: MVP
 
-As a visitor, I want the images to be responsive, so that content stays properly proportioned.
-As a visitor, I want the viewport properly sized, so that content fits all the size I have available.
-As a visitor, I want the primary nav to be responsive, so that I can get around using any device.
+As a developer, I want to use Handlebars for my project template, so that I can include new projects more easily.
+As a developer, I want my CSS styles to follow SMACSS organization, so that I know where to look for creating and editing styles.
 
-User Stories: Stretch Goals (adapt to fit your portfolio's design)
+User Stories: Stretch Goal
 
-As a visitor, I want to see projects one per row on mobile, so that I can read the detail easily.
+As a visitor, I want the site to use great typography, so that I have an enjoyable reading experience.
+Set up your h1, h2, h3 elements according to a type scale.
+Include some good fonts, that work well together.
 
 Technical Requirements and Grading Rubric
 
-Be sure to use proper viewport settings.
-Use mobile-first design principles when adding CSS.
-Add new styles in any media queries as needed to make the page look good on desktop screens.
-For bonus points, include styles for tablet displays, as well as desktop.
+Add Handlebars to your blogging system.
+Organize your CSS code according to SMACSS, with at least a file for base, layout, and modules.
+
+Helpful Resources
+
+Handlebars: http://handlebarsjs.com
+SMACSS: https://smacss.com/Portfolio 

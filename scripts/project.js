@@ -9,20 +9,11 @@ function Project (opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-  if (!this.lastMod) {
-    $newProject.addClass('draft');
-  }
-  $newProject.attr('data-category', this.category);
-  $newProject.find('a').attr('href', this.url);
-  $newProject.find('h1:first').html(this.title);
-  $newProject.find('.project-body').html(this.body);
-  $newProject.find('time[pubdate]').attr('datetime', this.lastMod);
-  $newProject.find('time[pubdate]').attr('title', this.lastMod);
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.lastMod))/60/60/24/1000) + ' days ago');
-  $newProject.append('<hr>');
-  return $newProject;
+  var appTemplate = $('#template').html();
+  var compileTemplate = Handlebars.compile(appTemplate);
+  this.daysAgo = parseInt((new Date() - new Date(this.lastMod))/60/60/24/1000);
+  this.modStatus = this.lastMod ? 'Last substantial modification: ' + this.daysAgo + ' days ago' : '(draft)';
+  return compileTemplate(this);
 };
 
 rawData.sort(function(a,b) {
