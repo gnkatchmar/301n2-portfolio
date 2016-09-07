@@ -1,6 +1,6 @@
 img {
   max-width: 100%;
-  margin: 1em;
+  margin: 1rem;
 }
 
 body {
@@ -14,20 +14,23 @@ body {
 }
 
 hr {
-  margin: 1em;
+  margin: 1rem;
   width: 80%;
 }
 
 section {
-  padding: 0 1.2em;
+  padding: 0 1.2rem;
 }
 
 /*TEXT STYLES
 =======================================*/
-h1 {
+h {
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-  text-align: center;
  }
+
+h1 {
+  text-align: center;
+}
 
 p {
   font-size: 1rem;
