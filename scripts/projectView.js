@@ -38,8 +38,8 @@ projectView.handleMainNav = function() {
 };
 
 projectView.setTeasers = function() {
-  $('.proect-body *:nth-of-type(n+2)').hide();
-  $('section#proejcts .read-on').on('click', function (e) {
+  $('.project-body *:nth-of-type(n+2)').hide();
+  $('section#projects .read-on').on('click', function (e) {
     e.preventDefault();
     var readOnLink = $(e.target);
     readOnLink.hide();
