@@ -1,9 +1,10 @@
 body {
-  background-color: white;
+  background-color: #CECCCC;
   line-height: 1.5;
   font-size: 100%;
-  color: blue;
+  color: #093824;
   margin: 0 10px;
+  font-family: 'Vollkorn', Georgia, Times, serif;
 }
 
 hr {
@@ -13,6 +14,10 @@ hr {
 
 /*TEXT STYLES
 =======================================*/
+h1 {
+   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+}
+
 p {
   font-size: 1em;
 }
@@ -21,15 +26,22 @@ address {
   display: inline-block;
 }
 
+ul {
+  list-style: none;
+}
+
 /*LINK STYLES
 =======================================*/
 
 a, a:link, a:active {
-  color: darkred;
+  color: #1B264F;
+  text-decoration: none;
 }
 
 a:hover, a:focus {
+  color: #274690;
 }
 
 a:visited {
+  color: 576CA8;
 }

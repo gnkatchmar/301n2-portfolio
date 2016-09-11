@@ -1,21 +1,18 @@
-var articleView = {};
+var projectView = {};
 
-articleView.populateFilters = function() {
+projectView.populateFilters = function() {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
-      // var val =  $(this).find('address a').text();
-      // var optionTag = "<option value='" + val + "'>" + val + "</option>";
-      // $('#author-filter').append(optionTag);
       var val = $(this).attr('data-category');
-      optionTag = "<option value='" + val + "'>" + val + "</option>";
-      if ($("#category-filter option[value='" + val + "']").length === 0 ) {
+      optionTag = '<option value="' + val + '">' + val + '</option>';
+      if ($('#category-filter option[value="' + val + '"]').length === 0 ) {
         $('#category-filter').append(optionTag);
       }
     }
   });
 };
 
-articleView.handleCategoryFilter = function() {
+projectView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       var $selectedCategory = $('article[data-category="' + $(this).val() + '"]');
@@ -29,7 +26,7 @@ articleView.handleCategoryFilter = function() {
   });
 };
 
-articleView.handleMainNav = function() {
+projectView.handleMainNav = function() {
   $('.main-nav .tab').on('click', function(){
     var tab_id = $(this).attr('data-content');
     var selectedTab = $('#' + tab_id);
@@ -40,9 +37,9 @@ articleView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-articleView.setTeasers = function() {
-  $('.article-body *:nth-of-type(n+2)').hide();
-  $('section#articles .read-on').on('click', function (e) {
+projectView.setTeasers = function() {
+  $('.proect-body *:nth-of-type(n+2)').hide();
+  $('section#proejcts .read-on').on('click', function (e) {
     e.preventDefault();
     var readOnLink = $(e.target);
     readOnLink.hide();
@@ -52,9 +49,9 @@ articleView.setTeasers = function() {
 };
 
 $(document).ready(function() {
-	articleView.populateFilters();
-  articleView.handleCategoryFilter();
-  articleView.handleMainNav();
-  articleView.setTeasers();
+  projectView.populateFilters();
+  projectView.handleCategoryFilter();
+  projectView.handleMainNav();
+  projectView.setTeasers();
 //
 });

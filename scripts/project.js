@@ -1,34 +1,28 @@
-var articles = [];
+var projects = [];
 
-function Article (opts) {
-  this.author = opts.author;
-  this.authorUrl = opts.authorUrl;
+function Project (opts) {
+  this.url = opts.url;
   this.title = opts.title;
   this.category = opts.category;
   this.body = opts.body;
   this.publishedOn = opts.publishedOn;
 }
 
-Article.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
-  $newArticle.removeClass('template');
+Project.prototype.toHtml = function() {
+  var $newProject = $('article.template').clone();
+  $newProject.removeClass('template');
   if (!this.publishedOn) {
-    $newArticle.addClass('draft');
+    $newProject.addClass('draft');
   }
-  $newArticle.attr('data-category', this.category);
-  // DONE: Use jQuery to also add the author name as a data-attribute of the newly cloned article.
-  //       Doing so will allow us to use selectors to target articles, based on who wrote them.
-  $newArticle.attr('data-attribute', this.author);
-
-  $newArticle.find('.byline a').html(this.author);
-  $newArticle.find('.byline a').attr('href', this.authorUrl);
-  $newArticle.find('h1:first').html(this.title);
-  $newArticle.find('.article-body').html(this.body);
-  $newArticle.find('time[pubdate]').attr('datetime', this.publishedOn);
-  $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
-  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-  $newArticle.append('<hr>');
-  return $newArticle;
+  $newProject.attr('data-category', this.category);
+  $newProject.find('a').attr('href', this.url);
+  $newProject.find('h1:first').html(this.title);
+  $newProject.find('.project-body').html(this.body);
+  $newProject.find('time[pubdate]').attr('datetime', this.publishedOn);
+  $newProject.find('time[pubdate]').attr('title', this.publishedOn);
+  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+  $newProject.append('<hr>');
+  return $newProject;
 };
 
 rawData.sort(function(a,b) {
@@ -36,9 +30,9 @@ rawData.sort(function(a,b) {
 });
 
 rawData.forEach(function(ele) {
-  articles.push(new Article(ele));
+  projects.push(new Project(ele));
 });
 
-articles.forEach(function(a){
-  $('#articles').append(a.toHtml());
+projects.forEach(function(a){
+  $('#projects').append(a.toHtml());
 });
