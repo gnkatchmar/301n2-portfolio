@@ -5,22 +5,22 @@
 
 #filters select {
   width: 90%;
-  margin: .2em 5%;
+  margin: .2rem 5%;
 }
 
 @media only screen and (min-width: 640px) {
   .heading-group-h1 {
-    padding: .1em .1em .1em 2em;
+    padding: .1rem .1rem .1rem 2rem;
     float: none;
   }
 
   #filters select {
-    width: 15em;
-    margin: .2em .2em;
+    width: 15rem;
+    margin: .2rem .2rem;
   }
 
   #filters li {
-    width: 20em;
+    width: 20rem;
     display: inline;
   }
 }
@@ -28,25 +28,26 @@
 @media screen
    and (min-device-width: 1200px)
    and (-webkit-min-device-pixel-ratio: 1) {
-    
+
      .main-nav ul {
        display: flex;
        justify-content: space-around;
        text-align: center;
      }
-     
+
      .main-nav li {
        display: inline-block;
-       padding: .5em 3em;
+       padding: .5rem 3rem;
+       font-size: 1.5rem;
      }
-     
+
      .heading-group-h1 {
        float: none;
        max-width: 100%;
        text-align: center;
      }
-     
+
      section {
-       padding: 0 3em;
+       padding: 0 3rem;
      }
 }
