@@ -1,4 +1,4 @@
-#filters {
+/*#filters {
   padding: 0;
   list-style: none;
 }
@@ -6,15 +6,16 @@
 #filters select {
   width: 90%;
   margin: .2rem 5%;
-}
+}*/
 
 @media only screen and (min-width: 640px) {
+
   .heading-group-h1 {
     padding: .1rem .1rem .1rem 2rem;
     float: none;
   }
 
-  #filters select {
+  /*#filters select {
     width: 15rem;
     margin: .2rem .2rem;
   }
@@ -22,12 +23,10 @@
   #filters li {
     width: 20rem;
     display: inline;
-  }
+  }*/
 }
 
-@media screen
-   and (min-device-width: 1200px)
-   and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 1200px) {
 
      .main-nav ul {
        display: flex;
@@ -51,3 +50,10 @@
        padding: 0 3rem;
      }
 }
+
+@media only screen and (min-width: 1600px) {
+
+     body {
+       font-size: 150%;
+     }
+   }
