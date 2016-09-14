@@ -28,10 +28,6 @@
   clear: both;
 }
 
-.main-nav:hover ul {
-  /*display: block;*/
-}
-
 .main-nav li {
   margin-right: .4rem;
   font-size: 1rem;

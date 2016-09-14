@@ -1,27 +1,27 @@
 # Portfolio
 Project for Code Fellows 301
 
-Portfolio Assignment for Class 4 - Templates and Typography
+Portfolio Assignment for Class 5 - Code Review
 
-Use what you learned in the class 4 lecture to improve the structure of your Portfolio app codebase.
+Work in pairs to improve your portfolio.
 
-User Stories: MVP
+No need to add each other as collaborators, just share a link to your portfolio repo with your partner.
 
-As a developer, I want to use Handlebars for my project template, so that I can include new projects more easily.
-As a developer, I want my CSS styles to follow SMACSS organization, so that I know where to look for creating and editing styles.
+Start with code review. Spend the first 30 minutes looking over your partner's portfolio code. Look for opportunities to
+improve the code base according to the best practices and concepts that we've covered in class so far.
 
-User Stories: Stretch Goal
+Remember, good code review:
 
-As a visitor, I want the site to use great typography, so that I have an enjoyable reading experience.
-Set up your h1, h2, h3 elements according to a type scale.
-Include some good fonts, that work well together.
+Focuses on the code, not the author
+Asks "Why is it this way?" rather than criticizing
+Will nitpick the details
+Seeks to make the code more understandable
+Embraces and congratulates best practices
+Respects the work that went into the current product
+Create descriptive issues for the most important issues that should be addressed. In the issue, describe what you see, ask clarifying questions as needed, and link to the related line of code in the repo.
 
-Technical Requirements and Grading Rubric
+Once you both have a few issues logged, start writing code together.
 
-Add Handlebars to your blogging system.
-Organize your CSS code according to SMACSS, with at least a file for base, layout, and modules.
+The Driver will work on the Navigator's codebase. The Navigator can talk them through what is where, and how changes should be made, and the Driver can implement them.
 
-Helpful Resources
-
-Handlebars: http://handlebarsjs.com
-SMACSS: https://smacss.com/Portfolio 
+Switch after you've worked through a few issues. Switch back again (and again) if time allows.
