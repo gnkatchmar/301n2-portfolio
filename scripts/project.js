@@ -31,4 +31,4 @@ Project.dataFetch = function() {
     Project.loadAll(data);
     projectView.initIndexPage();
   });
-}
+};
