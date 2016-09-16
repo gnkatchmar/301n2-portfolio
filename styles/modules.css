@@ -15,6 +15,10 @@
     float: none;
   }
 
+  body {
+    font-size: 120%;
+  }
+
   /*#filters select {
     width: 15rem;
     margin: .2rem .2rem;
