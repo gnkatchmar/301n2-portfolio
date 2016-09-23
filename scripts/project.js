@@ -10,24 +10,27 @@
 
   Project.all = [];
 
+//Handlebars template generation
   Project.prototype.toHtml = function() {
     var appTemplate = $('#template').html();
     var compileTemplate = Handlebars.compile(appTemplate);
-    this.daysAgo = parseInt((new Date() - new Date(this.lastMod))/60/60/24/1000);
-    this.modStatus = this.lastMod ? 'Last substantial modification: ' + this.daysAgo + ' days ago' : '(draft)';
+    this.modStatus = this.lastMod ? 'Last substantial modification: ' + this.lastMod : '(draft)';
     return compileTemplate(this);
   };
 
+//Load all projects in descending order of modification dates
   Project.loadAll = function(data) {
     data.sort(function(a, b) {
       return (new Date(b.lastMod)) - (new Date(a.lastMod));
     });
 
+    //this mapped chunklet is called by projectView.initIndexPage
     Project.all = data.map(function(ele) {
       return new Project(ele);
     });
   };
 
+//Grabs the JSON project data, sends to Project.loadAll
   Project.dataFetch = function(callback) {
     $.getJSON('data/blogProjects.json', function (data) {
       Project.loadAll(data);
@@ -35,6 +38,7 @@
     });
   };
 
+//Provides rough count of total words of all project bodies
   Project.numWordsAll = function() {
     return Project.all.map(function(project) {
       return project.body.split(' ').length;

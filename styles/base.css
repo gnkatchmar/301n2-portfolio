@@ -27,7 +27,7 @@ h {
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
  }
 
-h1 {
+h1, h2 {
   text-align: center;
 }
 
@@ -48,11 +48,11 @@ a, a:link, a:active {
   color: #1B264F;
   text-decoration: none;
 }
-
+/*
 a:hover, a:focus {
   color: #274690;
 }
 
 a:visited {
   color: #576CA8;
-}
+}*/
