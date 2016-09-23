@@ -15,6 +15,14 @@
     float: none;
   }
 
+  body {
+    font-size: 120%;
+  }
+  
+  .main-nav li {
+    font-size: 120%;
+     }
+
   /*#filters select {
     width: 15rem;
     margin: .2rem .2rem;
@@ -28,32 +36,32 @@
 
 @media only screen and (min-width: 1200px) {
 
-     .main-nav ul {
-       display: flex;
-       justify-content: space-around;
-       text-align: center;
-     }
+   .main-nav ul {
+     display: flex;
+     justify-content: space-around;
+     text-align: center;
+   }
 
-     .main-nav li {
-       display: inline-block;
-       padding: .5rem 3rem;
-       font-size: 1.5rem;
-     }
+   .main-nav li {
+     display: inline-block;
+     padding: .5rem 3rem;
+     font-size: 150%;
+   }
 
-     .heading-group-h1 {
-       float: none;
-       max-width: 100%;
-       text-align: center;
-     }
+   .heading-group-h1 {
+     float: none;
+     max-width: 100%;
+     text-align: center;
+   }
 
-     section {
-       padding: 0 3rem;
-     }
+   section {
+     padding: 0 3rem;
+   }
 }
 
 @media only screen and (min-width: 1600px) {
 
-     body {
-       font-size: 150%;
-     }
+   body {
+     font-size: 150%;
+   }
    }

@@ -1,20 +1,14 @@
 # Portfolio
 Project for Code Fellows 301
 
-Class 06 Portfolio assignment
+Assignment for Class 7 - Functional Programming
 
-User Stories: MVP
+Scopes and closures and IIFE's, oh my!
 
-As a developer, I want to store my project data in a .json file, so that I can keep it organized.
-As a developer, I want to retrieve that source data file asynchronously, so that my app logic gets the data just when I need it.
+Apply some functional programming concepts to your portfolio codebase.
 
-User Stories: Stretch Goals
-
-As a reader, I only want to have to fetch data when it's updated (and keep it cached locally), so that I don't make unneeded AJAX calls.
-
-Technical Requirements and Grading Rubric
-
-Transfer your collection of data over to a .json file, replacing your original file.
-Continue to follow good SMACSS principles.
-Be sure to use the correct jQuery method for each AJAX call.
-Be thoughtful when functions are executed asynchronously. This is a major source of bugs!
+Eliminate all for loops.
+Use map where you are transforming one collection into another.
+Enclose the contents of each script file in an IIFE, that exports any interface methods.
+Use templates to avoid repetition of HTML structure. Use map to convert collections of data into collections of DOM nodes.
+Think of a useful way to use reduce. Maybe you want to put some "fun facts stats" in your footer?
