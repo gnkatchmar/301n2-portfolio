@@ -1,5 +1,3 @@
-var projects = [];
-
 function Project (opts) {
   this.url = opts.url;
   this.title = opts.title;
@@ -7,6 +5,8 @@ function Project (opts) {
   this.body = opts.body;
   this.lastMod = opts.lastMod;
 }
+
+Project.all = [];
 
 Project.prototype.toHtml = function() {
   var appTemplate = $('#template').html();
@@ -16,14 +16,19 @@ Project.prototype.toHtml = function() {
   return compileTemplate(this);
 };
 
-rawData.sort(function(a,b) {
-  return (new Date(b.lastMod)) - (new Date(a.lastMod));
-});
+Project.loadAll = function(data) {
+  data.sort(function(a, b) {
+    return (new Date(b.lastMod)) - (new Date(a.lastMod));
+  });
 
-rawData.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+  data.forEach(function(ele) {
+    Project.all.push(new Project(ele));
+  });
+};
 
-projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
+Project.dataFetch = function() {
+  $.getJSON('data/blogProjects.json', function (data) {
+    Project.loadAll(data);
+    projectView.initIndexPage();
+  });
+};

@@ -38,7 +38,9 @@ projectView.handleMainNav = function() {
 };
 
 projectView.setTeasers = function() {
+  console.log('0');
   $('.project-body *:nth-of-type(n+2)').hide();
+  console.log('1');
   $('section#projects .read-on').on('click', function (e) {
     e.preventDefault();
     var readOnLink = $(e.target);
@@ -48,10 +50,16 @@ projectView.setTeasers = function() {
   });
 };
 
+projectView.initIndexPage = function() {
+  Project.all.forEach(function(a){
+    $('#projects').append(a.toHtml());
+  });
+  projectView.setTeasers();
+};
+
 $(document).ready(function() {
   // projectView.populateFilters();
   // projectView.handleCategoryFilter();
+  Project.dataFetch();
   projectView.handleMainNav();
-  projectView.setTeasers();
-//
 });
