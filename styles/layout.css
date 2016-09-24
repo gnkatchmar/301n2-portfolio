@@ -30,9 +30,8 @@
 
 .main-nav li {
   margin-right: .4rem;
-  font-size: 1rem;
+  font-size: 120%;
   padding: .2rem .2rem;
-  border-bottom: 1px solid #ccc;
 }
 
 .template {
@@ -49,6 +48,5 @@
 }
 
 .read-on {
-  font-size: 1.2rem;
-  color: #274690;
+  color: darkred;
 }
