@@ -1,16 +1,10 @@
 # Portfolio
 Project for Code Fellows 301
 
-Portfolio Assignment for Class 9 - Refactoring
+Portfolio Assignment for Class 11 - Single-Page Apps
 
-For this assignment, you will be refactoring your portfolio to better fit the OOP and FP principles that we have discussed over the last week. Prior to refactoring, you will need to perform a detailed code review that includes comments (or issues) related to the areas that you will be modifying.
+We converted the blog into a SPA by using the page.js library to capture clicks and execute a function to modify the page, rather than reloading content from a server.
 
-Technical Requirements and Grading Rubric
+Give your portfolio the same treatment. Update your main nav so that each clickable item is a link to a different url, that is handled by a function as indicated by page.js.
 
-Ensure your code passes ESLint.
-Perform a self-code-review, in GitHub, that includes comments (or issues) on the areas that you will be refactoring
-Your comments (or issues) should include high level technical details about how the related code should be refactored
-Use FP concepts and JS array methods to organize and/or manipulate your data
-Ensure that your JS modules are written in an OOP fashion and are wrapped in an IFFE in order to expose the module to the window
-Include a summary of your experience with your Canvas assignment submission.
-Have fun, be creative, and take your code to the next level!
+Keep your code organized in a M-V-C structure that isolates data management from presentation layer, from the controller that holds it all together.
