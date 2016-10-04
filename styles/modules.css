@@ -1,10 +1,5 @@
 @media only screen and (min-width: 640px) {
 
-  /*.heading-group-h1 {
-    padding: .1rem .1rem .1rem 2rem;
-    float: none;
-  }*/
-
   body {
     font-size: 120%;
   }
@@ -29,12 +24,6 @@
      border-radius: 50px;
      background-color: #CECCDC;
    }
-
-   /*.heading-group-h1 {
-     float: none;
-     max-width: 100%;
-     text-align: center;
-   }*/
 
    section {
      padding: 0 3rem;
