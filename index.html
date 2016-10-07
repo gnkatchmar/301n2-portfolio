@@ -24,6 +24,20 @@
           <hr>
         </article>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <!-- does not render Forks -->
+      <!-- <ul> -->
+        {{#unless fork}}
+          <li>
+              <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+              <p>Description: {{description}}<br>
+              Created: {{created_at}}<br>
+              Last updated: {{updated_at}}<br>
+              Size (in kilobytes): {{size}}</p>
+            </li>
+          {{/unless}}
+      <!-- </ul> -->
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -41,16 +55,10 @@
       <section id="projects" class="tab-content">
       </section>
       <section id="about" class="tab-content">
-        <header>
-          <h1>Welcome to my Blog</h1>
-        </header>
         <section>
-          <h2>Some of my interests:</h2>
+          <h1>Check out my Projects on GitHub:</h1>
           <ul>
-            <li>Coding</li>
-            <li>Cooking</li>
-            <li>Dining Out</li>
-            <li>Watching television, Netflix, and Amazon Prime series</li>
+            <li></li>
           </ul>
         </section>
       </section>
@@ -62,10 +70,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
-    <script src="scripts/project.js"></script>
-    <script src="scripts/projectView.js"></script>
-    <script src="scripts/aboutController.js"></script>
-    <script src="scripts/projectController.js"></script>
-    <script src="scripts/routes.js"></script>
+    <script src="scripts/githubToken.js"></script>
+
+    <script src="/scripts/project.js"></script>
+    <script src="/scripts/projectView.js"></script>
+    <script src="/scripts/projectController.js"></script>
+    <script src="/scripts/aboutController.js"></script>
+    <script src="/scripts/repo.js"></script>
+    <script src="/scripts/repoView.js"></script>
+    <script src="/scripts/routes.js"></script>
   </body>
 </html>
