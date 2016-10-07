@@ -8,9 +8,6 @@
     $.ajax({
       url: 'https://api.github.com/user/repos',
       type: 'GET',
-      headers: {
-        'Authorization': 'token ' + githubToken
-      },
       success: function(data){
         repos.all = data;  //added as repos.with('name').map(render) stopped working and could not fix
         callback();
