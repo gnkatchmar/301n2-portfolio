@@ -20,7 +20,6 @@
 
   //filter of repositories based on attr - set to name (which all have by default)
   repos.with = function(attr) {
-    console.log('Repos.With');
     return repos.all.filter(function(repo) {
       return repo[attr];
     });
