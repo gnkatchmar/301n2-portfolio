@@ -1,16 +1,29 @@
 # Portfolio
 Project for Code Fellows 301
 
-Portfolio Assignment for Class 12 - REST and API's
+Portfolio Assignment for Class 13 - Production Deployment
 
-In our blog, we used RESTful routes to interact with the Github API. It's time to take this a step further and integrate this functionality into your portfolio project.
+Ready to share your portfolio with the world? Yes! Your mom will be so proud.
 
-To get started, you will need to create a controller that includes a call to the Github API. This call should grab data about your individual account, and render portions of the returned content to the page, once the data has been loaded. This is fairly open ended, so use whatever data you deem fit and be sure to separate your concerns.
+Use what you practiced in pairs to deploy your portfolio site. The user stories are basically the same.
 
+User Stories: MVP
+
+As a developer, I want my portfolio to run in a development environment that closely matches production, so that I can reduce bugs related to infrastructure surprises.
+You'll need to create a new Heroku app, and link it to your portfolio
+As a site owner, I want my site running on a robust hosting platform, so that I don't have to hire a sysadmin.
+You'll need to get your app deployed and running on Heroku.
+Heroku will need to know what kind of app you are running, and how to run it.
+You can create a new package.json file, or copy over package.json and server.js from the blog project.
+As a developer, I want my secret tokens accessed only through environment variables, so that I can keep them secure.
+You'll need to configure an environment variable on your production server, so the server.js file can access your token when it's running.
+
+User Stories: Stretch Goals
+
+As a site owner, I want [www.my-own-domain-name.io] hooked up to my Heroku app, so that I don't have to explain to people how to spell "my-site-name.herokuapp.com" over the phone.
+As a site owner, I want my root domain to redirect to the www subdomain, so people can type in either one to load my app.
 Technical Requirements and Grading Rubric
 
-Ensure your code passes ESLint.
-Place all code within the proper layer of MVC abstraction and encapsulation.
-Use a proxied, authenticated ajax call to GitHub's API to get data from the API.
-Keep your portfolio responsive as it displays API data.
-DO NOT publish your GitHub Token to any public repo.
+Ensure your code passes ESLint
+DO NOT create your Heroku app with a default name. If you do accidentally, rename it. Or blow it away, and start again.
+Link to your live site in your portfolio README on GitHub.

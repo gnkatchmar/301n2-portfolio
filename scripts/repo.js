@@ -6,11 +6,8 @@
   //Retrieve my GitHub repository JSON via API
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/user/repos',
+      url: 'https://api.github.com/users/gnkatchmar/repos',
       type: 'GET',
-      headers: {
-        'Authorization': 'token ' + githubToken
-      },
       success: function(data){
         repos.all = data;  //added as repos.with('name').map(render) stopped working and could not fix
         callback();
