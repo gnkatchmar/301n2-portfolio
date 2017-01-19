@@ -14,7 +14,7 @@
   Project.prototype.toHtml = function() {
     var appTemplate = $('#template').html();
     var compileTemplate = Handlebars.compile(appTemplate);
-    this.modStatus = this.lastMod ? 'Last substantial modification: ' + this.lastMod : '(draft)';
+    this.modStatus = this.lastMod ? 'Completed: ' + this.lastMod : '(draft)';
     return compileTemplate(this);
   };
 
@@ -39,14 +39,14 @@
   };
 
 //Provides rough count of total words of all project bodies
-  Project.numWordsAll = function() {
-    return Project.all.map(function(project) {
-      return project.body.split(' ').length;
-    })
-   .reduce(function(accum, index) {
-     return accum + index;
-   });
-  };
+  // Project.numWordsAll = function() {
+  //   return Project.all.map(function(project) {
+  //     return project.body.split(' ').length;
+  //   })
+  //  .reduce(function(accum, index) {
+  //    return accum + index;
+  //  });
+  // };
 
   module.project = Project;
 
