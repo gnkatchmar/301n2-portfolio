@@ -20,14 +20,14 @@
             </div>
           </header>
           <section class="project-body">{{{body}}}</section>
-          <a href="#" class="read-on">Read full entry &rarr;</a>
+          <!--<a href="#" class="read-on">Read full entry &rarr;</a>-->
           <hr>
         </article>
     </script>
-    <script id="repo-template" type="text/x-handlebars-template">
+    <!--<script id="repo-template" type="text/x-handlebars-template">-->
       <!-- does not render Forks -->
       <!-- <ul> -->
-        {{#unless fork}}
+        <!--{{#unless fork}}
           <li>
               <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
               <p>Description: {{description}}<br>
@@ -35,35 +35,35 @@
               Last updated: {{updated_at}}<br>
               Size (in kilobytes): {{size}}</p>
             </li>
-          {{/unless}}
+          {{/unless}}-->
       <!-- </ul> -->
-    </script>
+    <!--</script>-->
   </head>
   <body>
     <header class="site-header">
-      <h1>Greg Katchmar's Project&nbsp;Blog</h1>
+      <h1>Greg Katchmar's Portfolio</h1>
     </header>
     <nav class="main-nav">
       <ul>
         <li class="tab" data-content="projects"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        <li class="tab" data-content="about"><a href="/about"><i class="fa fa-bullhorn" aria-hidden="true"></i> About</a></li>
-        <li><a href="https://www.linkedin.com/in/gregory-katchmar-3a48275a" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
+        <!--<li class="tab" data-content="about"><a href="/about"><i class="fa fa-bullhorn" aria-hidden="true"></i> About</a></li>-->
         <li><a href="https://github.com/gnkatchmar" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/gregory-katchmar-3a48275a" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
       </ul>
     </nav>
     <main>
       <section id="projects" class="tab-content">
       </section>
-      <section id="about" class="tab-content">
+      <!--<section id="about" class="tab-content">
         <section>
           <h1>Check out my Projects on GitHub:</h1>
           <ul>
             <li></li>
           </ul>
-        </section>
+        </section>-->
       </section>
-      <footer id="footer">
-      </footer>
+      <!--<footer id="footer">
+      </footer>-->
     </main>
     <script src="https://use.fontawesome.com/4b6dc7e55d.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -72,9 +72,9 @@
     <script src="/scripts/project.js"></script>
     <script src="/scripts/projectView.js"></script>
     <script src="/scripts/projectController.js"></script>
-    <script src="/scripts/aboutController.js"></script>
-    <script src="/scripts/repo.js"></script>
+    <!--<script src="/scripts/aboutController.js"></script>-->
+    <!--<script src="/scripts/repo.js"></script>
     <script src="/scripts/repoView.js"></script>
-    <script src="/scripts/routes.js"></script>
+    <script src="/scripts/routes.js"></script>-->
   </body>
 </html>

@@ -1,12 +1,12 @@
-(function(module) {
+// (function(module) {
 
-  var aboutController = {};
+//   var aboutController = {};
 
-  aboutController.index = function() {
-    $('#about').show().siblings().hide();
-    repos.requestRepos(repoView.index);
-  };
+//   aboutController.index = function() {
+//     $('#about').show().siblings().hide();
+//     repos.requestRepos(repoView.index);
+//   };
 
-  module.aboutController = aboutController;
+//   module.aboutController = aboutController;
 
-})(window);
+// })(window);
